@@ -1,15 +1,20 @@
 # [ REP 2K Time Clock Automation System ]
 
-print('====================================================\n')
 import os
 import pyautogui as pa
 import time
-
-
-print ("hello world!")
 os.system("cls")
-rep2k = input("Complete o Ip do REP2000: ")
+print('====================================================\n')
 
+rep2k = input("Complete o Ip do REP2000 [172.16.????]")
+# [Configurando input]
+# Formato desejado : "172.16.90.45"
+rep2k_str = str(rep2k)
+rep2k = f"{'172.16.'}{rep2k_str[:2]}.{rep2k_str[2:]}"
+
+print(rep2k)
+
+"""
 pa.press('win')
 time.sleep(1)
 pa.write("edge")
@@ -39,3 +44,4 @@ pa.write(rep2k)
 time.sleep(3)
 pa.press('tab')
 pa.press('enter')
+"""
